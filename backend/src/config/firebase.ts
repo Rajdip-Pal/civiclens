@@ -32,8 +32,8 @@ export const initializeFirebase = () => {
     }
 };
 
-export const getFirestore = () => admin.firestore();
-export const getStorage = () => admin.storage();
-export const getAuth = () => admin.auth();
+export const getFirestore = (): FirebaseFirestore.Firestore => admin.firestore();
+export const getStorage = (): admin.storage.Storage => admin.storage();
+export const getAuth = (): admin.auth.Auth => admin.auth();
 
 export default admin;
