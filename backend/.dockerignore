@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+.env
+.env.local
+serviceAccountKey.json
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+.git
+.gitignore
+README.md
+dist
+src
