@@ -7,13 +7,10 @@
         "dev": "nodemon src/index.ts",
         "build": "tsc",
         "start": "node dist/index.js",
-        "deploy": "gcloud run deploy civiclens-api --source . --region us-central1 --allow-unauthenticated --set-env-vars NODE_ENV=production",
         "test": "jest"
     },
     "dependencies": {
-        "@google-cloud/bigquery": "^7.3.0",
         "@google-cloud/storage": "^7.7.0",
-        "@google-cloud/vision": "^4.1.0",
         "@google/generative-ai": "^0.1.3",
         "express": "^4.18.2",
         "firebase-admin": "^12.0.0",

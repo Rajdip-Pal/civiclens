@@ -1,15 +1,22 @@
 import axios from 'axios';
 
-const MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
+// Using OpenStreetMap's free Nominatim API - NO API KEY REQUIRED!
+const NOMINATIM_URL = 'https://nominatim.openstreetmap.org';
 
 export const reverseGeocode = async (lat: number, lng: number): Promise<string> => {
     try {
+        // OpenStreetMap Nominatim requires a User-Agent header
         const response = await axios.get(
-            `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${MAPS_API_KEY}`
+            `${NOMINATIM_URL}/reverse?format=json&lat=${lat}&lon=${lng}`,
+            {
+                headers: {
+                    'User-Agent': 'CivicLens/1.0' // Required by Nominatim
+                }
+            }
         );
 
-        if (response.data.results && response.data.results.length > 0) {
-            return response.data.results[0].formatted_address;
+        if (response.data && response.data.display_name) {
+            return response.data.display_name;
         }
         return `${lat}, ${lng}`;
     } catch (error) {
@@ -20,11 +27,17 @@ export const reverseGeocode = async (lat: number, lng: number): Promise<string> 
 
 export const getPlaceDetails = async (placeId: string): Promise<any> => {
     try {
+        // OpenStreetMap lookup by OSM ID
         const response = await axios.get(
-            `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${MAPS_API_KEY}`
+            `${NOMINATIM_URL}/lookup?format=json&osm_ids=${placeId}`,
+            {
+                headers: {
+                    'User-Agent': 'CivicLens/1.0'
+                }
+            }
         );
 
-        return response.data.result;
+        return response.data[0] || null;
     } catch (error) {
         console.error('Place details error:', error);
         return null;

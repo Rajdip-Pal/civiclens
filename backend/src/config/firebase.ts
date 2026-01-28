@@ -12,13 +12,14 @@ export const initializeFirebase = () => {
         if (process.env.NODE_ENV === 'production') {
             admin.initializeApp({
                 projectId: process.env.FIREBASE_PROJECT_ID,
+                storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
             });
         } else {
             // In development, use service account key
-            const serviceAccount = require('../../serviceAccountKey.json');
+            const serviceAccount = require('../../civiclens0-firebase-adminsdk-fbsvc-70e65b69a7.json');
             admin.initializeApp({
                 credential: admin.credential.cert(serviceAccount),
-                storageBucket: `${process.env.FIREBASE_PROJECT_ID}.appspot.com`,
+                storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${process.env.FIREBASE_PROJECT_ID}.appspot.com`,
             });
         }
 

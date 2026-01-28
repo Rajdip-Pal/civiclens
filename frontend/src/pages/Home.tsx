@@ -1,4 +1,14 @@
-import { Box, Typography, Button, Grid, Paper, Container, Card, CardContent, Chip } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  Grid,
+  Paper,
+  Container,
+  Card,
+  CardContent,
+  Chip,
+} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -29,8 +39,8 @@ export default function Home() {
           sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}
         >
           Report civic issues in your community, track their status, and help
-          local authorities respond faster. Powered by AI for smart categorization
-          and efficient resolution.
+          local authorities respond faster. Powered by AI for smart
+          categorization and efficient resolution.
         </Typography>
 
         <Box sx={{ mt: 4 }}>
@@ -163,37 +173,77 @@ export default function Home() {
         </Typography>
         <Grid container spacing={3} sx={{ mt: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <Card elevation={0} sx={{ bgcolor: 'primary.light', color: 'white', textAlign: 'center', py: 2 }}>
+            <Card
+              elevation={0}
+              sx={{
+                bgcolor: 'primary.light',
+                color: 'white',
+                textAlign: 'center',
+                py: 2,
+              }}
+            >
               <CardContent>
                 <AutoAwesomeIcon sx={{ fontSize: 40, mb: 1 }} />
-                <Typography variant='h4' fontWeight='bold'>AI-Powered</Typography>
+                <Typography variant='h4' fontWeight='bold'>
+                  AI-Powered
+                </Typography>
                 <Typography variant='body2'>Smart Analysis</Typography>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card elevation={0} sx={{ bgcolor: 'success.light', color: 'white', textAlign: 'center', py: 2 }}>
+            <Card
+              elevation={0}
+              sx={{
+                bgcolor: 'success.light',
+                color: 'white',
+                textAlign: 'center',
+                py: 2,
+              }}
+            >
               <CardContent>
                 <SpeedIcon sx={{ fontSize: 40, mb: 1 }} />
-                <Typography variant='h4' fontWeight='bold'>Real-Time</Typography>
+                <Typography variant='h4' fontWeight='bold'>
+                  Real-Time
+                </Typography>
                 <Typography variant='body2'>Instant Updates</Typography>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card elevation={0} sx={{ bgcolor: 'warning.light', color: 'white', textAlign: 'center', py: 2 }}>
+            <Card
+              elevation={0}
+              sx={{
+                bgcolor: 'warning.light',
+                color: 'white',
+                textAlign: 'center',
+                py: 2,
+              }}
+            >
               <CardContent>
                 <SecurityIcon sx={{ fontSize: 40, mb: 1 }} />
-                <Typography variant='h4' fontWeight='bold'>Secure</Typography>
+                <Typography variant='h4' fontWeight='bold'>
+                  Secure
+                </Typography>
                 <Typography variant='body2'>Data Protected</Typography>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card elevation={0} sx={{ bgcolor: 'info.light', color: 'white', textAlign: 'center', py: 2 }}>
+            <Card
+              elevation={0}
+              sx={{
+                bgcolor: 'info.light',
+                color: 'white',
+                textAlign: 'center',
+                py: 2,
+              }}
+            >
               <CardContent>
                 <TrendingUpIcon sx={{ fontSize: 40, mb: 1 }} />
-                <Typography variant='h4' fontWeight='bold'>Scalable</Typography>
+                <Typography variant='h4' fontWeight='bold'>
+                  Scalable
+                </Typography>
                 <Typography variant='body2'>Grows With You</Typography>
               </CardContent>
             </Card>
@@ -214,30 +264,46 @@ export default function Home() {
                 Community-Driven
               </Typography>
               <Typography variant='body2' color='text.secondary'>
-                Empower citizens to actively participate in improving their communities.
-                Every report contributes to building better, more responsive cities.
+                Empower citizens to actively participate in improving their
+                communities. Every report contributes to building better, more
+                responsive cities.
               </Typography>
               <Box sx={{ mt: 2 }}>
-                <Chip label="Citizen Engagement" size="small" sx={{ mr: 1, mb: 1 }} />
-                <Chip label="Transparency" size="small" sx={{ mr: 1, mb: 1 }} />
-                <Chip label="Accountability" size="small" sx={{ mb: 1 }} />
+                <Chip
+                  label='Citizen Engagement'
+                  size='small'
+                  sx={{ mr: 1, mb: 1 }}
+                />
+                <Chip label='Transparency' size='small' sx={{ mr: 1, mb: 1 }} />
+                <Chip label='Accountability' size='small' sx={{ mb: 1 }} />
               </Box>
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
             <Paper sx={{ p: 3, height: '100%' }}>
-              <AutoAwesomeIcon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
+              <AutoAwesomeIcon
+                sx={{ fontSize: 40, color: 'primary.main', mb: 2 }}
+              />
               <Typography variant='h6' gutterBottom>
                 Intelligent Automation
               </Typography>
               <Typography variant='body2' color='text.secondary'>
-                Advanced AI analyzes text and images to automatically categorize issues,
-                detect duplicates, and prioritize based on urgency and impact.
+                Advanced AI analyzes text and images to automatically categorize
+                issues, detect duplicates, and prioritize based on urgency and
+                impact.
               </Typography>
               <Box sx={{ mt: 2 }}>
-                <Chip label="Auto-Categorization" size="small" sx={{ mr: 1, mb: 1 }} />
-                <Chip label="Priority Detection" size="small" sx={{ mr: 1, mb: 1 }} />
-                <Chip label="Duplicate Removal" size="small" sx={{ mb: 1 }} />
+                <Chip
+                  label='Auto-Categorization'
+                  size='small'
+                  sx={{ mr: 1, mb: 1 }}
+                />
+                <Chip
+                  label='Priority Detection'
+                  size='small'
+                  sx={{ mr: 1, mb: 1 }}
+                />
+                <Chip label='Duplicate Removal' size='small' sx={{ mb: 1 }} />
               </Box>
             </Paper>
           </Grid>
@@ -252,15 +318,22 @@ export default function Home() {
         <Typography variant='body1' color='text.secondary' sx={{ mb: 3 }}>
           We cover a wide range of civic issues
         </Typography>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 1 }}>
-          <Chip label="🚧 Infrastructure" color="primary" />
-          <Chip label="🚮 Sanitation" color="primary" />
-          <Chip label="💡 Street Lighting" color="primary" />
-          <Chip label="🚗 Traffic" color="primary" />
-          <Chip label="🌳 Environment" color="primary" />
-          <Chip label="🏛️ Public Services" color="primary" />
-          <Chip label="⚠️ Safety" color="primary" />
-          <Chip label="📋 Other" color="primary" />
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 1,
+          }}
+        >
+          <Chip label='🚧 Infrastructure' color='primary' />
+          <Chip label='🚮 Sanitation' color='primary' />
+          <Chip label='💡 Street Lighting' color='primary' />
+          <Chip label='🚗 Traffic' color='primary' />
+          <Chip label='🌳 Environment' color='primary' />
+          <Chip label='🏛️ Public Services' color='primary' />
+          <Chip label='⚠️ Safety' color='primary' />
+          <Chip label='📋 Other' color='primary' />
         </Box>
       </Box>
     </Container>
